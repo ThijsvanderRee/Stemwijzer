@@ -1,3 +1,3 @@
-function start()
-
+function start() {
+  
 }
