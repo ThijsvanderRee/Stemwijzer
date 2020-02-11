@@ -9,6 +9,7 @@
     <script src="script.js" charset="utf-8"></script>
   </head>
   <body>
+  <div class="start">
     <div class="w3-container w3-padding-64 container">
       <div class="holder">
         <img class="logo" src="img/logo.svg" alt="">
@@ -82,6 +83,10 @@
         <img class="partij" src="https://tweedekamer2017.stemwijzer.nl/public/gfx/parties/vdp.png" alt="">
       </div>
     </div>
+  </div>
+  <div class="question_holder">
+    <h1 class="blue"><span class="question_number"></span> <span class="question"></span> </h1>
+  </div>
     <footer>
       <img class="footer_logo" src="img/logo-footer.png" alt="">
     </footer>
