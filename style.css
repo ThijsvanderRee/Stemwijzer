@@ -1,5 +1,9 @@
+:root {
+  --color-blue: #01B4DC;
+}
+
 .blue {
-  color: #01B4DC;
+  color: var(--color-blue);;
 }
 
 .white {
@@ -28,6 +32,7 @@ body {
   background-color: #fff;
   width: 85%;
   margin: 25px auto 0;
+  padding: 0;
 }
 
 .holder {
@@ -42,4 +47,42 @@ p {
 
 .logo {
   width: 350px;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  min-height: 200px;
+}
+.right {
+  width: 50%;
+  float: right;
+  min-height: 200px;
+  text-align: right;
+}
+
+.start-btn {
+  padding: 20px 65px;
+  background-color: #000;
+  text-decoration: none;
+  transition: 0.1s ease-in-out all;
+  font-size: 22px;
+  border: none;
+  outline: none;
+}
+
+.start-btn:hover {
+  background-color: var(--color-blue);
+}
+
+.partijen {
+  background-color: var(--color-blue);
+  margin-top: 0;
+}
+
+.partij {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
 }
