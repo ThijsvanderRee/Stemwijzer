@@ -22,6 +22,10 @@
   margin-top: 0!important;
 }
 
+.hide {
+  display: none;
+}
+
 body {
   padding: 0;
   margin: 0;

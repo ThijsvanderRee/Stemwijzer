@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="right">
-            <button href="" class="w3-round start-btn white bold">Start</button>
+            <button href="" class="w3-round start-btn white bold" onclick="start()">Start</button>
           </div>
         </div>
       </div>
