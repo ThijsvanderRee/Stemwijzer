@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -86,19 +85,26 @@
   </div>
   <div class="question_holder container w3-container w3-padding" id="question_holder">
     <div class="holder">
-      <h1 class="blue bold"><span id="question_number"></span>. <span id="question_title"></span> </h1>
+      <h1 class="blue bold"><span id="question_title"></span> </h1>
       <br>
       <h2 class="black"><span id="question_statement">Dit is een vraag</span> </h2>
     </div>
     <div class="spacer"></div>
     <div class="holder">
-      <button class="w3-round white bold question_button" type="button" name="button">Eens</button>
-      <button class="w3-round white bold question_button" type="button" name="button">Geen van beide</button>
-      <button class="w3-round white bold question_button" type="button" name="button">Oneens</button>
+      <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Eens</button>
+      <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Geen van beide</button>
+      <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Oneens</button>
       <div class="skip">
         <p class="skip_text black" type="button" name="button">Sla deze vraag over</p>
         <img class="skip_arrow" src="img/arrow.svg" alt="">
       </div>
+    </div>
+  </div>
+  <div class="question_holder alt">
+    <div class="holder">
+      <h1 class="blue bold"> Zijn er extra onderwerpen die u extra belangrijk vind?</h1>
+      <p class="black bold">Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
+
     </div>
   </div>
     <footer>
