@@ -9,7 +9,7 @@
     <script src="script.js" charset="utf-8"></script>
   </head>
   <body>
-  <div class="start">
+  <div id="start" class="">
     <div class="w3-container w3-padding-64 container">
       <div class="holder">
         <img class="logo" src="img/logo.svg" alt="">
@@ -84,8 +84,22 @@
       </div>
     </div>
   </div>
-  <div class="question_holder">
-    <h1 class="blue"><span class="question_number"></span> <span class="question"></span> </h1>
+  <div class="question_holder container w3-container w3-padding" id="question_holder">
+    <div class="holder">
+      <h1 class="blue bold"><span id="question_number"></span>. <span id="question_title"></span> </h1>
+      <br>
+      <h2 class="black"><span id="question_statement">Dit is een vraag</span> </h2>
+    </div>
+    <div class="spacer"></div>
+    <div class="holder">
+      <button class="w3-round white bold question_button" type="button" name="button">Eens</button>
+      <button class="w3-round white bold question_button" type="button" name="button">Geen van beide</button>
+      <button class="w3-round white bold question_button" type="button" name="button">Oneens</button>
+      <div class="skip">
+        <p class="skip_text black" type="button" name="button">Sla deze vraag over</p>
+        <img class="skip_arrow" src="img/arrow.svg" alt="">
+      </div>
+    </div>
   </div>
     <footer>
       <img class="footer_logo" src="img/logo-footer.png" alt="">

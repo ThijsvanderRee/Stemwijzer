@@ -22,8 +22,21 @@
   margin-top: 0!important;
 }
 
+p {
+  font-size: 18px;
+  line-height: 18px;
+}
+
 .hide {
   display: none;
+}
+
+.showquestion {
+  display: block !important;
+}
+
+.spacer {
+  height: 100px;
 }
 
 body {
@@ -44,92 +57,125 @@ body {
   padding: 0;
 }
 
-.holder {
-  width: 80%;
-  margin: 0 auto;
+  .holder {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+    .logo {
+      width: 350px;
+    }
+
+  .left {
+    width: 50%;
+    float: left;
+    min-height: 200px;
+  }
+
+  .right {
+    width: 50%;
+    float: right;
+    min-height: 200px;
+    text-align: right;
+  }
+
+  .flex {
+    display: flex;
+    margin-top: 50px;
+  }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .icon_text {
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+
+    .start-btn {
+      padding: 20px 65px;
+      background-color: #000;
+      text-decoration: none;
+      transition: 0.1s ease-in-out all;
+      font-size: 22px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .start-btn:hover {
+      background-color: var(--color-blue);
+    }
+
+  .dotted_top {
+    border-top: 2px dotted gray;
+    background-color: #f0f0f0;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .partijen {
+    background-color: var(--color-blue);
+    padding-bottom: 50px !important;
+  }
+
+    .een_vandaag {
+      width: 200px;
+      margin: 40px 0 30px;
+    }
+
+  .partij {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.2s ease all;
+    margin: 10px 5px;
+    padding: 5px;
+  }
+
+  .partij:hover {
+    transform: scale(2);
+    box-shadow: 0px 0px 20px -10px;
+  }
+
+.question_holder {
+  display: none;
 }
 
-p {
-  font-size: 18px;
-  line-height: 18px;
-}
+  .question_button {
+    padding: 10px 40px;
+    background-color: #000;
+    text-decoration: none;
+    transition: 0.1s ease-in-out all;
+    font-size: 22px;
+    margin: 0 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 
-.logo {
-  width: 350px;
-}
-
-.left {
-  width: 50%;
-  float: left;
-  min-height: 200px;
-}
-
-.right {
-  width: 50%;
-  float: right;
-  min-height: 200px;
-  text-align: right;
-}
-
-.flex {
-  display: flex;
-  margin-top: 50px;
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-}
-
-.icon_text {
-  margin: 0 0 0 20px;
-  padding: 0;
-}
-
-.start-btn {
-  padding: 20px 65px;
-  background-color: #000;
-  text-decoration: none;
-  transition: 0.1s ease-in-out all;
-  font-size: 22px;
-  border: none;
-  outline: none;
-}
-
-.start-btn:hover {
+.question_button:hover {
   background-color: var(--color-blue);
 }
 
-.dotted_top {
-  border-top: 2px dotted gray;
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+.skip {
+ display: flex;
+ cursor: pointer;
+ width: fit-content;
 }
 
-.partijen {
-  background-color: var(--color-blue);
-  padding-bottom: 50px !important;
-}
+  .skip img {
+    width: 25px;
+    margin-left: 10px;
+    float: right;
+  }
 
-.een_vandaag {
-  width: 200px;
-  margin: 40px 0 30px;
-}
-
-.partij {
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: 0.2s ease all;
-  margin: 10px 5px;
-  padding: 5px;
-}
-
-.partij:hover {
-  transform: scale(2);
-  box-shadow: 0px 0px 20px -10px;
-}
+  .skip:hover .skip img {
+    background-color: red;
+  }
 
 footer {
   width: 80%;
@@ -137,6 +183,6 @@ footer {
   padding: 20px 0;
 }
 
-.footer_logo {
-  width: 150px;
-}
+  .footer_logo {
+    width: 150px;
+  }
