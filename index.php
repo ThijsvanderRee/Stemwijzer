@@ -94,13 +94,13 @@
       <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Eens</button>
       <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Geen van beide</button>
       <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Oneens</button>
-      <div class="skip">
+      <div class="skip" onclick="next()">
         <p class="skip_text black" type="button" name="button">Sla deze vraag over</p>
         <img class="skip_arrow" src="img/arrow.svg" alt="">
       </div>
     </div>
   </div>
-  <div class="question_holder alt">
+  <div class="question_holder" id="qh_alt">
     <div class="holder">
       <h1 class="blue bold"> Zijn er extra onderwerpen die u extra belangrijk vind?</h1>
       <p class="black bold">Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>

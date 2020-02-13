@@ -16,7 +16,7 @@ function start() {
 
 function next() {
   var questions = document.getElementById('question_holder');
-  var alt = document.getElementById('alt');
+  var alt = document.getElementById('qh_alt');
   console.log(vraag);
   if (vraag >= 29) {
     questions.classList.remove('showquestion');
