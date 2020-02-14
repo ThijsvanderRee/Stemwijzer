@@ -1,10 +1,10 @@
 var vraag = 0;
 
 function start() {
-  var home = document.getElementById('start');
-  var questions = document.getElementById('question_holder');
-  var question_title = document.getElementById('question_title');
-  var question_statement = document.getElementById('question_statement');
+  const home = document.getElementById('start');
+  const questions = document.getElementById('question_holder');
+  const question_title = document.getElementById('question_title');
+  const question_statement = document.getElementById('question_statement');
 
   home.classList.add('hide');
   questions.classList.add('showquestion');
@@ -23,14 +23,20 @@ function next() {
     alt.classList.add('showquestion');
     var x = 0;
     for (var i = 0; i < vraag; i++) {
-      // var checkboxes_inner = document.createElement('DIV');  
+      var checkbox_inner = document.createElement('DIV');
       var checkbox = document.createElement('INPUT');
       var checkbox_text = document.createElement('SPAN');
+
       checkbox_text.innerHTML = subjects[x].title;
+
       x++;
+
       checkbox.setAttribute("type", "checkbox");
-      document.getElementById("checkboxes_holder").appendChild(checkbox);
-      document.getElementById("checkboxes_holder").appendChild(checkbox_text);
+      checkbox_inner.setAttribute("id", "checkbox_inner" + x);
+
+      document.getElementById("checkboxes_holder").appendChild(checkbox_inner);
+      document.getElementById("checkbox_inner" + x).appendChild(checkbox);
+      document.getElementById("checkbox_inner" + x).appendChild(checkbox_text);
     }
   } else {
     vraag++;
