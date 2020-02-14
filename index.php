@@ -100,10 +100,12 @@
       </div>
     </div>
   </div>
-  <div class="question_holder" id="qh_alt">
+  <div class="question_holder container w3-container w3-padding" id="qh_alt">
     <div class="holder">
       <h1 class="blue bold"> Zijn er extra onderwerpen die u extra belangrijk vind?</h1>
       <p class="black bold">Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
+    </div>
+    <div class="holder" id="checkboxes_holder">
 
     </div>
   </div>

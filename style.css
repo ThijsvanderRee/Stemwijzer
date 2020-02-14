@@ -171,15 +171,21 @@ body {
     width: 25px;
     margin-left: 10px;
     float: right;
+    transition: 0.2s ease-in-out all;
   }
 
-  .skip:hover .skip img {
-    background-color: red;
+  .skip:hover img {
+    margin-left: 20px;
   }
 
-.qh_alt {
+#checkboxes_holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  }
+#checkboxes_inner {
+  display: inline;
+}
 
 footer {
   width: 80%;

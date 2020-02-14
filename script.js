@@ -17,14 +17,20 @@ function start() {
 function next() {
   var questions = document.getElementById('question_holder');
   var alt = document.getElementById('qh_alt');
-  console.log(vraag);
+  // console.log(vraag);
   if (vraag >= 29) {
     questions.classList.remove('showquestion');
-    for (var i = 0; i < vraag.length; i++) {
+    alt.classList.add('showquestion');
+    var x = 0;
+    for (var i = 0; i < vraag; i++) {
+      // var checkboxes_inner = document.createElement('DIV');  
       var checkbox = document.createElement('INPUT');
-      var checkbox_text = document.createTextNode(question_title);
+      var checkbox_text = document.createElement('SPAN');
+      checkbox_text.innerHTML = subjects[x].title;
+      x++;
       checkbox.setAttribute("type", "checkbox");
-      document.body.appendChild(alt);
+      document.getElementById("checkboxes_holder").appendChild(checkbox);
+      document.getElementById("checkboxes_holder").appendChild(checkbox_text);
     }
   } else {
     vraag++;
