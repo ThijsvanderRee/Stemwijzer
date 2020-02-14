@@ -181,6 +181,8 @@ body {
 #checkboxes_holder {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 0;
+  margin-bottom: 20px;
 }
 
 footer {

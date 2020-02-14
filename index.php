@@ -104,6 +104,7 @@
     <div class="holder">
       <h1 class="blue bold"> Zijn er extra onderwerpen die u extra belangrijk vind?</h1>
       <p class="black bold">Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
+      <button class="w3-round white bold question_button"type="button" name="button" style="float:right; margin-bottom: 20px;">Ga verder</button>
     </div>
     <div class="holder" id="checkboxes_holder">
 

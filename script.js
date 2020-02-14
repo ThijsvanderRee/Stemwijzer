@@ -8,7 +8,7 @@ function start() {
 
   home.classList.add('hide');
   questions.classList.add('showquestion');
-  console.log(subjects);
+  // console.log(subjects);
 
   question_title.innerHTML = (vraag+1) + ". " + subjects[vraag].title;
   question_statement.innerHTML = subjects[vraag].statement;
@@ -29,14 +29,13 @@ function next() {
 
       checkbox_text.innerHTML = subjects[x].title;
 
-      x++;
-
       checkbox.setAttribute("type", "checkbox");
       checkbox_inner.setAttribute("id", "checkbox_inner" + x);
 
       document.getElementById("checkboxes_holder").appendChild(checkbox_inner);
       document.getElementById("checkbox_inner" + x).appendChild(checkbox);
       document.getElementById("checkbox_inner" + x).appendChild(checkbox_text);
+      x++;
     }
   } else {
     vraag++;
