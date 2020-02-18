@@ -143,7 +143,17 @@ body {
 
 .question_holder {
   display: none;
+  min-height: 90%;
+  position: relative;
 }
+
+  .buttons_holder {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    left: 0;
+    padding: 0 10%;
+  }
 
   .question_button {
     padding: 10px 40px;

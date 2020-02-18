@@ -87,13 +87,13 @@
     <div class="holder">
       <h1 class="blue bold"><span id="question_title"></span> </h1>
       <br>
-      <h2 class="black"><span id="question_statement">Dit is een vraag</span> </h2>
+      <h2 class="black"><span id="question_statement"></span> </h2>
     </div>
     <div class="spacer"></div>
-    <div class="holder">
-      <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Eens</button>
-      <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Geen van beide</button>
-      <button class="w3-round white bold question_button" type="button" name="button" onclick="next()">Oneens</button>
+    <div class="holder buttons_holder">
+      <button class="w3-round white bold question_button" type="button" name="button" onclick="next('pro')">Eens</button>
+      <button class="w3-round white bold question_button" type="button" name="button" onclick="next('none')">Geen van beide</button>
+      <button class="w3-round white bold question_button" type="button" name="button" onclick="next('contra')">Oneens</button>
       <div class="skip" onclick="next()">
         <p class="skip_text black" type="button" name="button">Sla deze vraag over</p>
         <img class="skip_arrow" src="img/arrow.svg" alt="">
@@ -104,7 +104,7 @@
     <div class="holder">
       <h1 class="blue bold"> Zijn er extra onderwerpen die u extra belangrijk vind?</h1>
       <p class="black bold">Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
-      <button class="w3-round white bold question_button"type="button" name="button" style="float:right; margin-bottom: 20px;">Ga verder</button>
+      <button class="w3-round white bold question_button"type="button" name="button" style="float:right; margin-bottom: 20px;" onclick="chooseParty()">Ga verder</button>
     </div>
     <div class="holder" id="checkboxes_holder">
 
