@@ -59,9 +59,9 @@ function next(answer) {
   }
 }
 
-function chooseParty() {
-  var alt = document.getElementById('qh_alt');
-
-  alt.classList.remove('showquestion');
-  console.log(parties)
-}
+// function chooseParty() {
+//   var alt = document.getElementById('qh_alt');
+//
+//   alt.classList.remove('showquestion');
+//   console.log(parties)
+// }
