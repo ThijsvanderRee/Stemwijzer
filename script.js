@@ -1,5 +1,8 @@
 var vraag = 0;
-var counter = 0;
+
+for (var i = 0; i < 23; i++) {
+  const points = parties[i].points = 0;
+}
 
 function start() {
   const home = document.getElementById('start');
@@ -9,15 +12,9 @@ function start() {
 
   home.classList.add('hide');
   questions.classList.add('showquestion');
-  // console.log(subjects);
 
   question_title.innerHTML = (vraag+1) + ". " + subjects[vraag].title;
   question_statement.innerHTML = subjects[vraag].statement;
-
-  // for (var a = 0; a < 23; a++) {
-  //   console.log(subjects[vraag].parties[a].position);
-  // }
-
 }
 
 function next(answer) {
@@ -43,25 +40,19 @@ function next(answer) {
       x++;
     }
   } else {
-    if (answer == "pro") {
-      console.log('eens');
-      counter++;
-    } else if (answer == "none") {
-      console.log('geen van beide');
-      // counter++;
-    } else if (answer == "contra") {
-      console.log('oneens');
-      counter--;
-    }
-    console.log(counter)
-    vraag++;
-    start();
-  }
-}
 
-// function chooseParty() {
-//   var alt = document.getElementById('qh_alt');
-//
-//   alt.classList.remove('showquestion');
-//   console.log(parties)
-// }
+    for (var i = 0; i < 23; i++) {
+      var checkPosition = subjects[vraag].parties[i].position;
+      var points = parties[i].points;
+      if (checkPosition == answer){
+        parties[i].points++;
+        // console.log(parties[i]);
+      } else if (checkPosition !== answer){
+        console.log("geen punt");
+      }
+      console.log(parties[i]);
+    }
+  }
+  vraag++;
+  start();
+}
