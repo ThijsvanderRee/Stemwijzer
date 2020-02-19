@@ -40,19 +40,42 @@ function next(answer) {
       x++;
     }
   } else {
-
     for (var i = 0; i < 23; i++) {
       var checkPosition = subjects[vraag].parties[i].position;
       var points = parties[i].points;
       if (checkPosition == answer){
         parties[i].points++;
-        // console.log(parties[i]);
-      } else if (checkPosition !== answer){
-        console.log("geen punt");
       }
-      console.log(parties[i]);
     }
+    vraag++;
+    start();
   }
-  vraag++;
-  start();
+}
+
+function chooseParty() {
+  var alt = document.getElementById('qh_alt');
+  var chooseParty = document.getElementById('qh_alt_alt');
+  var parties_holder = document.getElementById('parties_holder');
+
+  alt.classList.remove('showquestion');
+  chooseParty.classList.add('showquestion');
+
+  var j = 0;
+  var partyAmount = parties.length;
+
+  for (var i = 0; i < partyAmount; i++) {
+    var checkbox_inner = document.createElement('DIV');
+    var checkbox = document.createElement('INPUT');
+    var checkbox_text = document.createElement('SPAN');
+
+    checkbox_text.innerHTML = parties[j].name;
+
+    checkbox.setAttribute("type", "checkbox");
+    checkbox_inner.setAttribute("id", "chooseparty_inner" + j);
+
+    document.getElementById("parties_holder").appendChild(checkbox_inner);
+    document.getElementById("chooseparty_inner" + j).appendChild(checkbox);
+    document.getElementById("chooseparty_inner" + j).appendChild(checkbox_text);
+    j++;
+  }
 }
