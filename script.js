@@ -81,6 +81,14 @@ function chooseParty() {
 }
 
 function results() {
-    parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
-    console.log(parties[1].name);
+  var chooseParty = document.getElementById('qh_alt_alt');
+  var show_winner = document.getElementById('qh_winner');
+
+  chooseParty.classList.remove('showquestion');
+  show_winner.classList.add('showquestion');
+
+  parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
+  console.log(parties[1].name);
+  var winner_name = document.getElementById("winner_title");
+  winner_name.innerHTML = parties[1].name;
 }

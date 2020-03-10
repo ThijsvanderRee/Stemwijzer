@@ -202,6 +202,13 @@ body {
   margin-bottom: 20px;
 }
 
+#winner_title {
+  text-align: center;
+  padding-top: 50%;
+  font-size: 100px;
+  margin-top: -50px;
+}
+
 footer {
   width: 80%;
   margin: 0 auto;

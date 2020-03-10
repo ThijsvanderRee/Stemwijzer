@@ -124,6 +124,12 @@
 
     </div>
   </div>
+
+  <div class="question_holder container w3-container w3-padding" id="qh_winner">
+    <div class="holder">
+      <h1 class="black bold" id="winner_title"></h1>
+    </div>
+  </div>
   <footer>
     <img class="footer_logo" src="img/logo-footer.png" alt="">
   </footer>
