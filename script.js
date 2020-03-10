@@ -52,6 +52,15 @@ function next(answer) {
   }
 }
 
+function previousQuestion() {
+  if (vraag <= 0) {
+    location.reload();
+  } else {
+    vraag--;
+    start();
+  }
+}
+
 function chooseParty() {
   var alt = document.getElementById('qh_alt');
   var chooseParty = document.getElementById('qh_alt_alt');
@@ -71,11 +80,17 @@ function chooseParty() {
     checkbox_text.innerHTML = parties[j].name;
 
     checkbox.setAttribute("type", "checkbox");
-    checkbox_inner.setAttribute("id", "chooseparty_inner" + j);
+    checkbox.setAttribute("value", parties[j].name);
+    checkbox.setAttribute("class", "cbPartij");
+    checkbox_inner.setAttribute("id", "chooseparty_inner_" + j);
 
     document.getElementById("parties_holder").appendChild(checkbox_inner);
-    document.getElementById("chooseparty_inner" + j).appendChild(checkbox);
-    document.getElementById("chooseparty_inner" + j).appendChild(checkbox_text);
+    document.getElementById("chooseparty_inner_" + j).appendChild(checkbox);
+    document.getElementById("chooseparty_inner_" + j).appendChild(checkbox_text);
+
+    // if (document.getElementsByClassName("cbPartij").checked = true) {
+    //
+    // }
     j++;
   }
 }

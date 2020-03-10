@@ -88,6 +88,7 @@
   </div>
   <div class="question_holder container w3-container w3-padding" id="question_holder">
     <div class="holder">
+      <button class="bold previous_button" type="button" name="button" onclick="previousQuestion();"><</button>
       <h1 class="blue bold"><span id="question_title"></span> </h1>
       <br>
       <h2 class="black"><span id="question_statement"></span> </h2>

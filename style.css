@@ -171,6 +171,16 @@ body {
   background-color: var(--color-blue);
 }
 
+.previous_button {
+  height: 50px;
+  width: 50px;
+  margin-left: -70px;
+  position: absolute;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
 .skip {
  display: flex;
  cursor: pointer;
@@ -204,9 +214,7 @@ body {
 
 #winner_title {
   text-align: center;
-  padding-top: 50%;
   font-size: 100px;
-  margin-top: -50px;
 }
 
 footer {
