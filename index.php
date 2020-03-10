@@ -118,7 +118,7 @@
     <div class="holder">
       <h1 class="blue bold">Welke partijen wilt u meenemen in het resultaat?</h1>
       <p class="black bold">U kunt kiezen voor zittende partijen, die nu in de Tweede Kamer vertegenwoordigd zijn. Daarbij nemen we ook de partijen mee die in de peilingen op minimaal één zetel staan. U kunt alle partijen meenemen en u kunt een eigen selectie maken van tenminste drie partijen.</p>
-      <button class="w3-round white bold question_button" type="button" name="button" style="float:right; margin-bottom: 20px;">Naar resultaat</button>
+      <button class="w3-round white bold question_button" type="button" name="button" style="float:right; margin-bottom: 20px;" onclick="results()">Naar resultaat</button>
     </div>
     <div class="holder" id="parties_holder">
 

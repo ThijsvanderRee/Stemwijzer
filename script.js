@@ -79,3 +79,8 @@ function chooseParty() {
     j++;
   }
 }
+
+function results() {
+    parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
+    console.log(parties[1].name);
+}
