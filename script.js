@@ -93,8 +93,7 @@ function chooseParty() {
   }
 }
 
-function results(){
-
+function results() {
 	var items = document.getElementsByClassName('cbPartij');
 	var selectedItems = "";
   var selectedParties = [];
