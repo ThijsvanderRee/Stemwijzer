@@ -1,4 +1,5 @@
 var vraag = 0;
+var chosenParties = [];
 
 for (var i = 0; i < 23; i++) {
   const points = parties[i].points = 0;
@@ -96,19 +97,20 @@ function results(){
 
 	var items = document.getElementsByClassName('cbPartij');
 	var selectedItems = "";
-  var w = new Array('');
+  var selectedParties = [];
 	for(var i = 0; i < items.length; i++) {
 		if(items[i].checked == true) {
 			selectedItems = items[i].value;
-      w.push(selectedItems);
+      selectedParties.push(selectedItems);
     }
 	}
-  w.shift();
-	console.log(w);
-
-  for (i = 0; i < w.length; i++) {
-    
-  }
+  selectedParties.forEach((item, i) => {
+    for (var j = 0; j < parties.length; j++) {
+      if (selectedParties[i] === parties[j].name) {
+        chosenParties.push(parties[j])
+      }
+    }
+  });
 
   var chooseParty = document.getElementById('qh_alt_alt');
   var show_winner = document.getElementById('qh_winner');
@@ -116,7 +118,7 @@ function results(){
   chooseParty.classList.remove('showquestion');
   show_winner.classList.add('showquestion');
 
-  parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
+  chosenParties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
   var winner_name = document.getElementById("winner_title");
-  winner_name.innerHTML = parties[1].name;
+  winner_name.innerHTML = chosenParties[0].name;
 }
