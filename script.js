@@ -88,14 +88,28 @@ function chooseParty() {
     document.getElementById("chooseparty_inner_" + j).appendChild(checkbox);
     document.getElementById("chooseparty_inner_" + j).appendChild(checkbox_text);
 
-    // if (document.getElementsByClassName("cbPartij").checked = true) {
-    //
-    // }
     j++;
   }
 }
 
-function results() {
+function results(){
+
+	var items = document.getElementsByClassName('cbPartij');
+	var selectedItems = "";
+  var w = new Array('');
+	for(var i = 0; i < items.length; i++) {
+		if(items[i].checked == true) {
+			selectedItems = items[i].value;
+      w.push(selectedItems);
+    }
+	}
+  w.shift();
+	console.log(w);
+
+  for (i = 0; i < w.length; i++) {
+    
+  }
+
   var chooseParty = document.getElementById('qh_alt_alt');
   var show_winner = document.getElementById('qh_winner');
 
@@ -103,7 +117,6 @@ function results() {
   show_winner.classList.add('showquestion');
 
   parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
-  console.log(parties[1].name);
   var winner_name = document.getElementById("winner_title");
   winner_name.innerHTML = parties[1].name;
 }
