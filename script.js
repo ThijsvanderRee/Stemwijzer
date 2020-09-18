@@ -115,11 +115,11 @@ function results() {
 
   if (selectedItems.length > 0) {
     selectedParties.forEach((item, i) => {
-      for (var j = 0; j < parties.length; j++) {
+      parties.forEach((item, i) => {
         if (selectedParties[i] === parties[j].name) {
           chosenParties.push(parties[j])
         }
-      }
+      });
     });
     // console.log('chosen');
     chosenParties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
