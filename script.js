@@ -1,9 +1,9 @@
 var question = 0;
 var chosenParties = [];
-var partiesAmount = parties.length - 1;
-var questionAmount = subjects.length -1;
-console.log(partiesAmount);
-console.log(questionAmount);
+var partiesAmount = parties.length;
+var questionAmount = subjects.length;
+// console.log(partiesAmount);
+// console.log(questionAmount);
 
 for (var i = 0; i < partiesAmount; i++) {
   const points = parties[i].points = 0;
@@ -28,7 +28,7 @@ function altQuestion() {
   questions.classList.remove('showquestion');
   alt.classList.add('showquestion');
   var x = 0;
-  for (var i = 0; i < questionAmount + 1; i++) {
+  for (var i = 0; i < questionAmount; i++) {
     var checkbox_inner = document.createElement('DIV');
     var checkbox = document.createElement('INPUT');
     var checkbox_text = document.createElement('SPAN');
@@ -46,7 +46,7 @@ function altQuestion() {
 }
 
 function next(answer) {
-  if (question >= questionAmount) {
+  if (question >= questionAmount - 1) {
     altQuestion()
     } else {
     for (var i = 0; i < partiesAmount; i++) {
