@@ -1,7 +1,11 @@
-var vraag = 0;
+var question = 0;
 var chosenParties = [];
+var partiesAmount = parties.length - 1;
+var questionAmount = subjects.length -1;
+console.log(partiesAmount);
+console.log(questionAmount);
 
-for (var i = 0; i < 23; i++) {
+for (var i = 0; i < partiesAmount; i++) {
   const points = parties[i].points = 0;
 }
 
@@ -14,50 +18,54 @@ function start() {
   home.classList.add('hide');
   questions.classList.add('showquestion');
 
-  question_title.innerHTML = (vraag+1) + ". " + subjects[vraag].title;
-  question_statement.innerHTML = subjects[vraag].statement;
+  question_title.innerHTML = (question + 1) + ". " + subjects[question].title;
+  question_statement.innerHTML = subjects[question].statement;
+}
+
+function altQuestion() {
+  var questions = document.getElementById('question_holder');
+  var alt = document.getElementById('qh_alt');
+  questions.classList.remove('showquestion');
+  alt.classList.add('showquestion');
+  var x = 0;
+  for (var i = 0; i < questionAmount + 1; i++) {
+    var checkbox_inner = document.createElement('DIV');
+    var checkbox = document.createElement('INPUT');
+    var checkbox_text = document.createElement('SPAN');
+
+    checkbox_text.innerHTML = subjects[x].title;
+
+    checkbox.setAttribute("type", "checkbox");
+    checkbox_inner.setAttribute("id", "checkbox_inner" + x);
+
+    document.getElementById("checkboxes_holder").appendChild(checkbox_inner);
+    document.getElementById("checkbox_inner" + x).appendChild(checkbox);
+    document.getElementById("checkbox_inner" + x).appendChild(checkbox_text);
+    x++;
+  }
 }
 
 function next(answer) {
-  var questions = document.getElementById('question_holder');
-  var alt = document.getElementById('qh_alt');
-  if (vraag >= 29) {
-    questions.classList.remove('showquestion');
-    alt.classList.add('showquestion');
-    var x = 0;
-    for (var i = 0; i < vraag; i++) {
-      var checkbox_inner = document.createElement('DIV');
-      var checkbox = document.createElement('INPUT');
-      var checkbox_text = document.createElement('SPAN');
-
-      checkbox_text.innerHTML = subjects[x].title;
-
-      checkbox.setAttribute("type", "checkbox");
-      checkbox_inner.setAttribute("id", "checkbox_inner" + x);
-
-      document.getElementById("checkboxes_holder").appendChild(checkbox_inner);
-      document.getElementById("checkbox_inner" + x).appendChild(checkbox);
-      document.getElementById("checkbox_inner" + x).appendChild(checkbox_text);
-      x++;
-    }
-  } else {
-    for (var i = 0; i < 23; i++) {
-      var checkPosition = subjects[vraag].parties[i].position;
+  if (question >= questionAmount) {
+    altQuestion()
+    } else {
+    for (var i = 0; i < partiesAmount; i++) {
+      var checkPosition = subjects[question].parties[i].position;
       var points = parties[i].points;
       if (checkPosition == answer){
         parties[i].points++;
       }
     }
-    vraag++;
+    question++;
     start();
   }
 }
 
 function previousQuestion() {
-  if (vraag <= 0) {
+  if (question <= 0) {
     location.reload();
   } else {
-    vraag--;
+    question--;
     start();
   }
 }

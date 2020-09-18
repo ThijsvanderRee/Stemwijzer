@@ -5,7 +5,7 @@
   <title>Stemwijzer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="http://stemwijzer.dvc-icta.nl/data.js"></script>
+  <script src="http://stemwijzer.dvc-icta.nl/testdata.js"></script>
   <script src="script.js" charset="utf-8"></script>
 </head>
 
