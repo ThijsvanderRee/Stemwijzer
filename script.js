@@ -3,8 +3,6 @@ var chosenParties = [];
 var savedAnswers = [];
 var partiesAmount = parties.length;
 var questionAmount = subjects.length;
-// console.log(partiesAmount);
-// console.log(questionAmount);
 
 for (var i = 0; i < partiesAmount; i++) {
   const points = parties[i].points = 0;
@@ -61,6 +59,7 @@ function next(answer) {
     }
     question++;
     start();
+    console.log(parties);
   }
 }
 
@@ -101,7 +100,6 @@ function chooseParty() {
     document.getElementById("chooseparty_inner_" + j).appendChild(checkbox_text);
 
     j++;
-    console.log(j);
   }
 }
 
@@ -119,20 +117,17 @@ function results() {
 
   if (selectedItems.length > 0) {
     selectedParties.forEach((item, i) => {
-      parties.forEach((item, i) => {
+      parties.forEach((item, j) => {
         if (selectedParties[i] === parties[j].name) {
           chosenParties.push(parties[j]);
         }
       });
     });
-    // console.log('chosen');
     chosenParties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
-    // console.log(chosenParties);
     var winner_name = document.getElementById("winner_title");
     winner_name.innerHTML = chosenParties[0].name;
 
   } else {
-    // console.log("not chosen");
     var winners = parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
     var winner_name_alt = document.getElementById("winner_title");
     winner_name_alt.innerHTML = winners[0].name;
