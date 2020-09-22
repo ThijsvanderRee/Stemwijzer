@@ -1,5 +1,6 @@
 var question = 0;
 var chosenParties = [];
+var savedAnswers = [];
 var partiesAmount = parties.length;
 var questionAmount = subjects.length;
 // console.log(partiesAmount);
@@ -46,6 +47,8 @@ function altQuestion() {
 }
 
 function next(answer) {
+  savedAnswers.push(answer);
+  console.log(savedAnswers);
   if (question >= questionAmount - 1) {
     altQuestion()
     } else {
@@ -98,6 +101,7 @@ function chooseParty() {
     document.getElementById("chooseparty_inner_" + j).appendChild(checkbox_text);
 
     j++;
+    console.log(j);
   }
 }
 
@@ -117,7 +121,7 @@ function results() {
     selectedParties.forEach((item, i) => {
       parties.forEach((item, i) => {
         if (selectedParties[i] === parties[j].name) {
-          chosenParties.push(parties[j])
+          chosenParties.push(parties[j]);
         }
       });
     });
