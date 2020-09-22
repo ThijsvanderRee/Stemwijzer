@@ -49,11 +49,11 @@ function next(answer) {
   console.log(savedAnswers);
   if (question >= questionAmount - 1) {
     altQuestion()
-    } else {
+  } else {
     for (var i = 0; i < partiesAmount; i++) {
       var checkPosition = subjects[question].parties[i].position;
       var points = parties[i].points;
-      if (checkPosition == answer){
+      if (checkPosition == answer) {
         parties[i].points++;
       }
     }
@@ -104,12 +104,12 @@ function chooseParty() {
 }
 
 function results() {
-	var items = document.getElementsByClassName('cbPartij');
-	var selectedItems = "";
+  var items = document.getElementsByClassName('cbPartij');
+  var selectedItems = "";
   var selectedParties = [];
 
-  for(var i = 0; i < items.length; i++) {
-    if(items[i].checked == true) {
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].checked == true) {
       selectedItems = items[i].value;
       selectedParties.push(selectedItems);
     }
@@ -123,12 +123,12 @@ function results() {
         }
       });
     });
-    chosenParties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
+    chosenParties.sort((a, b) => (a.points > b.points) ? -1 : 1);
     var winner_name = document.getElementById("winner_title");
     winner_name.innerHTML = chosenParties[0].name;
 
   } else {
-    var winners = parties.sort((a,b) => (a.points > b.points) ? -1 : 1 );
+    var winners = parties.sort((a, b) => (a.points > b.points) ? -1 : 1);
     var winner_name_alt = document.getElementById("winner_title");
     winner_name_alt.innerHTML = winners[0].name;
   }
