@@ -103,10 +103,24 @@ function chooseParty() {
   }
 }
 
+function addPoints() {
+  for (var i = 0; i < questionAmount; i++) {
+    for (var j = 0; j < partiesAmount; j++) {
+      var checkPosition = subjects[i].parties[j].position;
+      var points = parties[j].points;
+      if (checkPosition == savedAnswers[i]) {
+        parties[j].points++;
+      }
+    }
+  }
+}
+
 function results() {
   var items = document.getElementsByClassName('cbPartij');
   var selectedItems = "";
   var selectedParties = [];
+
+  addPoints();
 
   for (var i = 0; i < questionAmount; i++) {
     for(var j = 0; j < partiesAmount; j++) {
