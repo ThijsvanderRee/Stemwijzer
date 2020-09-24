@@ -50,13 +50,13 @@ function next(answer) {
   if (question >= questionAmount - 1) {
     altQuestion()
   } else {
-    for (var i = 0; i < partiesAmount; i++) {
-      var checkPosition = subjects[question].parties[i].position;
-      var points = parties[i].points;
-      if (checkPosition == answer) {
-        parties[i].points++;
-      }
-    }
+    // for (var i = 0; i < partiesAmount; i++) {
+    //   var checkPosition = subjects[question].parties[i].position;
+    //   var points = parties[i].points;
+    //   if (checkPosition == answer) {
+    //     parties[i].points++;
+    //   }
+    // }
     question++;
     start();
     console.log(parties);
@@ -107,6 +107,16 @@ function results() {
   var items = document.getElementsByClassName('cbPartij');
   var selectedItems = "";
   var selectedParties = [];
+
+  for (var i = 0; i < questionAmount; i++) {
+    for(var j = 0; j < partiesAmount; j++) {
+      var checkPosition = subjects[i].parties[j].position;
+      var points = parties[j].points;
+      if (checkPosition == savedAnswers[i]) {
+        parties[j].points++;
+      }
+    }
+  }
 
   for (var i = 0; i < items.length; i++) {
     if (items[i].checked == true) {
