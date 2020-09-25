@@ -49,15 +49,7 @@ function next(answer) {
   console.log(savedAnswers);
   if (question >= questionAmount - 1) {
     altQuestion()
-  } else {
-    // for (var i = 0; i < partiesAmount; i++) {
-    //   var checkPosition = subjects[question].parties[i].position;
-    //   var points = parties[i].points;
-    //   if (checkPosition == answer) {
-    //     parties[i].points++;
-    //   }
-    // }
-    question++;
+  } else {;
     start();
     console.log(parties);
   }
@@ -121,16 +113,6 @@ function results() {
   var selectedParties = [];
 
   addPoints();
-
-  for (var i = 0; i < questionAmount; i++) {
-    for(var j = 0; j < partiesAmount; j++) {
-      var checkPosition = subjects[i].parties[j].position;
-      var points = parties[j].points;
-      if (checkPosition == savedAnswers[i]) {
-        parties[j].points++;
-      }
-    }
-  }
 
   for (var i = 0; i < items.length; i++) {
     if (items[i].checked == true) {
