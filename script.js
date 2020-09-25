@@ -49,7 +49,8 @@ function next(answer) {
   console.log(savedAnswers);
   if (question >= questionAmount - 1) {
     altQuestion()
-  } else {;
+  } else {
+    question++;
     start();
     console.log(parties);
   }
@@ -97,7 +98,7 @@ function chooseParty() {
 
 function addPoints() {
   for (var i = 0; i < questionAmount; i++) {
-    for (var j = 0; j < partiesAmount; j++) {
+    for (var j = 0; j < subjects[i].parties.length; j++) {
       var checkPosition = subjects[i].parties[j].position;
       var points = parties[j].points;
       if (checkPosition == savedAnswers[i]) {
@@ -105,6 +106,7 @@ function addPoints() {
       }
     }
   }
+  console.log(parties);
 }
 
 function results() {
