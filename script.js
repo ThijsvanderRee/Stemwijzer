@@ -13,15 +13,19 @@ function start() {
   const questions = document.getElementById('question_holder');
   const question_title = document.getElementById('question_title');
   const question_statement = document.getElementById('question_statement');
-  const pro_btn = document.getElementById('pro_btn');
-  const none_btn = document.getElementById('none_btn');
-  const contra_btn = document.getElementById('contra_btn');
 
   home.classList.add('hide');
   questions.classList.add('showquestion');
 
   question_title.innerHTML = (question + 1) + ". " + subjects[question].title;
   question_statement.innerHTML = subjects[question].statement;
+  chnageBtnColor();
+}
+
+function chnageBtnColor() {
+  const pro_btn = document.getElementById('pro_btn');
+  const none_btn = document.getElementById('none_btn');
+  const contra_btn = document.getElementById('contra_btn');
   if (savedAnswers[question] == "pro") {
     // console.log('pro');
     pro_btn.classList.add('answered_btn');
