@@ -19,10 +19,10 @@ function start() {
 
   question_title.innerHTML = (question + 1) + ". " + subjects[question].title;
   question_statement.innerHTML = subjects[question].statement;
-  chnageBtnColor();
+  changeBtnColor();
 }
 
-function chnageBtnColor() {
+function changeBtnColor() {
   const pro_btn = document.getElementById('pro_btn');
   const none_btn = document.getElementById('none_btn');
   const contra_btn = document.getElementById('contra_btn');
