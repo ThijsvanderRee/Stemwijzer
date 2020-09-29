@@ -45,7 +45,8 @@ function altQuestion() {
 }
 
 function next(answer) {
-  savedAnswers.push(answer);
+  // savedAnswers.push(answer);
+  savedAnswers.splice(question, 1, answer)
   console.log(savedAnswers);
   if (question >= questionAmount - 1) {
     altQuestion()
