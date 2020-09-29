@@ -95,9 +95,9 @@
     </div>
     <div class="spacer"></div>
     <div class="holder buttons_holder">
-      <button class="w3-round white bold question_button" type="button" name="button" onclick="next('pro')">Eens</button>
-      <button class="w3-round white bold question_button" type="button" name="button" onclick="next('none')">Geen van beide</button>
-      <button class="w3-round white bold question_button" type="button" name="button" onclick="next('contra')">Oneens</button>
+      <button class="w3-round white bold question_button" id="pro_btn" type="button" name="button" onclick="next('pro')">Eens</button>
+      <button class="w3-round white bold question_button" id="none_btn" type="button" name="button" onclick="next('none')">Geen van beide</button>
+      <button class="w3-round white bold question_button" id="contra_btn" type="button" name="button" onclick="next('contra')">Oneens</button>
       <div class="skip" onclick="next()">
         <p class="skip_text black" type="button" name="button">Sla deze vraag over</p>
         <img class="skip_arrow" src="img/arrow.svg" alt="">

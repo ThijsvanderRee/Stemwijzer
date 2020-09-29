@@ -226,3 +226,8 @@ footer {
   .footer_logo {
     width: 150px;
   }
+
+
+.answered_btn {
+  background-color: var(--color-blue)!important;
+}
