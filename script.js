@@ -8,6 +8,7 @@ for (var i = 0; i < partiesAmount; i++) {
   const points = parties[i].points = 0;
 }
 
+//Functie die een vraag start op basis van nummer in question
 function start() {
   const home = document.getElementById('start');
   const questions = document.getElementById('question_holder');
@@ -22,6 +23,7 @@ function start() {
   changeBtnColor();
 }
 
+//Functie die de kleur van een knop veranderd als je een vraag terug gaat naar het antwoord vna die vraag
 function changeBtnColor() {
   const pro_btn = document.getElementById('pro_btn');
   const none_btn = document.getElementById('none_btn');
@@ -48,6 +50,7 @@ function changeBtnColor() {
   }
 }
 
+//Functie die de normale vragen niet meer laat zien en de vragen weergeeft waar je kan kiezen welke vraag je belangrijk vind
 function altQuestion() {
   var questions = document.getElementById('question_holder');
   var alt = document.getElementById('qh_alt');
@@ -71,6 +74,7 @@ function altQuestion() {
   }
 }
 
+//Functie die naar de volgende vraag gaat en het antwoord op slaat van de huidige vraag in een array op de goede plek
 function next(answer) {
   // savedAnswers.push(answer);
   savedAnswers.splice(question, 1, answer)
@@ -84,6 +88,7 @@ function next(answer) {
   }
 }
 
+//Functie die naar de vorige vraag gaat
 function previousQuestion() {
   if (question <= 0) {
     location.reload();
@@ -93,6 +98,7 @@ function previousQuestion() {
   }
 }
 
+//Functie die de vraag laat zien waar je moet kiezen welke partij je mee wilt nemen naar het kiezen
 function chooseParty() {
   var alt = document.getElementById('qh_alt');
   var chooseParty = document.getElementById('qh_alt_alt');
@@ -124,6 +130,7 @@ function chooseParty() {
   }
 }
 
+//Functie die op basis van de antwoorden punten geeft aan de partijen waarbij het antwoord gelijk is
 function addPoints() {
   for (var i = 0; i < questionAmount; i++) {
     for (var j = 0; j < subjects[i].parties.length; j++) {
@@ -137,6 +144,7 @@ function addPoints() {
   // console.log(parties);
 }
 
+//Functie uit alle partijen de partij met de meeste punten pakt en weergeeft
 function results() {
   var items = document.getElementsByClassName('cbPartij');
   var selectedItems = "";
